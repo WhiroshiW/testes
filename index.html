@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Ecos da Última Porta — 3D PS1</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="ui">
+    <div id="hud">
+      <div id="sanity-block">
+        <span class="lbl">SANIDADE</span>
+        <div id="sanity-bar"><div id="sanity-fill"></div></div>
+        <span id="cond-text">FINE</span>
+      </div>
+      <div id="hud-right">
+        <div id="room-name">Hall</div>
+        <div id="objective">Objetivo: explore o bar</div>
+      </div>
+    </div>
+    <div id="inv-bar">
+      <div class="slot" data-i="0"></div>
+      <div class="slot" data-i="1"></div>
+      <div class="slot" data-i="2"></div>
+      <div class="slot" data-i="3"></div>
+    </div>
+    <div id="prompt" class="hidden"></div>
+    <div id="message"></div>
+    <div id="start-screen">
+      <h1>ECOS DA ÚLTIMA PORTA</h1>
+      <p class="sub">DEMO 3D · ESTILO PS1 / RESIDENT EVIL</p>
+      <button type="button" id="btn-start">INICIAR</button>
+      <div class="help">
+        <p><b>↑↓←→</b> tank · <b>E</b> ação · <b>F</b> lanterna · <b>Espaço</b> atacar</p>
+        <p><b>1-4</b> inventário · <b>V</b> colisores · <b>C</b> câmera</p>
+      </div>
+    </div>
+    <div id="gameover-screen" class="hidden">
+      <h2>SANIDADE ESGOTADA</h2>
+      <button type="button" id="btn-restart">TENTAR DE NOVO</button>
+    </div>
+  </div>
+  <div id="canvas-wrap"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
